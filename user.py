@@ -1,9 +1,17 @@
 class User:
+
+    '''
+    new user class
+    '''
+
     user_list = []
+    def __init__(self,userName,password):
+        self.userName= userName
+        self.password= password
 
-    def_init_(self,userName,password):
-    self.userName=userName
-    self.password=password
+        def save_user(self):
 
-    def save_user()
+            User.user_list.append(self) 
+
+   
 
