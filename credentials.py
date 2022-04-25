@@ -40,7 +40,7 @@ class TestUser(unittest.TestCase):
         """
         # first we save a user
         self.new_user.save_user()
-        test_user = User("Agnes", "7710")  # new user
+        test_user = User("Agnes", "0000")  # new user
         test_user.save_user()
         # then with the existing contact
         user_exists = User.user_exists("Agnes")

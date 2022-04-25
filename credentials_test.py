@@ -12,7 +12,7 @@ class TestUser(unittest.TestCase):
         set up method to run before each test case
         """
 # create a user object
-        self.new_user = User("kwepo", "7710")
+        self.new_user = User("Agnes", "0000")
     def tearDown(self):
         """
         method to clean up after each test
@@ -22,17 +22,17 @@ class TestUser(unittest.TestCase):
         """
         to test if object is properly initialised
         """
-        self.assertEqual(self.new_user.user_name, "Kwepo")
-        self.assertEqual(self.new_user.user_password, "7710")
+        self.assertEqual(self.new_user.user_name, "Agnes")
+        self.assertEqual(self.new_user.user_password, "0000")
     def test_log_in(self):
         """
         test to establish whether user can log into their credentials
         """
         # start by saving user
         self.new_user.save_user()
-        test_user = User("Hughes", "Mugera")
+        test_user = User("Tom", "Mui")
         test_user.save_user()
-        found_credentials = User.log_in("Hughes", "Mugera")
+        found_credentials = User.log_in("Tom", "Mui")
         self.assertEqual(found_credentials, Credentials.credentials_list)
     def test_user_exists(self):
         """
@@ -40,10 +40,10 @@ class TestUser(unittest.TestCase):
         """
         # first we save a user
         self.new_user.save_user()
-        test_user = User("kwepo", "7710")  # new user
+        test_user = User("Agnes", "0000")  # new user
         test_user.save_user()
         # then with the existing contact
-        user_exists = User.user_exists("kwepo")
+        user_exists = User.user_exists("Agnes")
         self.assertTrue(user_exists)
 if __name__ == '__main__':
     unittest.main(verbosity=2)

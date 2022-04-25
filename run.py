@@ -98,16 +98,16 @@ def main():
     """
     Function to run the password locker app
     """
-    print("WELCOME TO PASSWORD LOCKER!")
+    print("Welcome!!")
     while True:
         """
         loop that is running the entire Application
         """
         print("""Short codes:
-        cr - Create a password Locker account \n
-        dis - Display names of current password Locker users \n
-        lg - Log into your account on password Locker \n
-        ex - Exit the password Locker account """)
+        cr - Create a password \n
+        dis - Display names of current  users \n
+        lg - Log into your account  \n
+        ex - Exit  """)
         # taking short codes from the user
         short_code = input().lower()
         if short_code == "cr":
@@ -122,7 +122,7 @@ def main():
             save_users(create_user(user_name, user_password))
             print("\n")
             print(
-                f"Welcome {user_name} Your account has been created successfully! to Password Locker.\n")
+                f"Welcome {user_name} Your account has been created successfully!.\n")
         elif short_code == "dis":
             """
             show names of present user
@@ -237,7 +237,7 @@ def main():
                             print(" :warning: That Credentials does not Exist :warning: ")
                     elif short_code == "ext":
                         print(
-                            f"Thank you {user_name} for using Password Locker.See You Again!")
+                            f"Thank you {user_name} for using Password Locker.")
                         print("\n")
                         break
                     else:
@@ -250,7 +250,7 @@ def main():
             Exiting password locker
             """
             print("\n")
-            print("Bye, have a Nice day .....")
+            print("Goodbye.")
             break
         else:
             print("\n")
