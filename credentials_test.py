@@ -1,80 +1,49 @@
-import unittest  # Importing the unittest module
-from credentials import Credentials  # Importing the Credentials  class 
-class TestCredentials(unittest.TestCase):
+import unittest
+from httplib2 import Credentials
+from user import User
+class TestUser(unittest.TestCase):
     """
-    class for test that defines test cases for the credentials module
+    test class that tests cases for the User class
     Args:
-        unittest.TestCase : test class for python that helps create test cases for the application
+        unittest.Testcase: class that helps create test cases
     """
     def setUp(self):
         """
-        set up method will run before each test case
+        set up method to run before each test case
         """
-        # creating the credential object
-        self.new_credentials = Credentials("kwepo", "gmail", "k@g.c")
+# create a user object
+        self.new_user = User("kwepo", "7710")
     def tearDown(self):
         """
-        the tearDown method will help to clean up after every test case is run
+        method to clean up after each test
         """
-        
-        Credentials.credentials_list = []
+        User.user_list = []
     def test_init(self):
         """
-        testcase: testing to see whether object is well initialised
+        to test if object is properly initialised
         """
-        self.assertEqual(self.new_credentials.user_name, "Agnes")
-        self.assertEqual(self.new_credentials.credentials_name, "gmail")
-        self.assertEqual(self.new_credentials.credentials_password, "k@g.c")
-        
-        def test_save_credentials(self):
+        self.assertEqual(self.new_user.user_name, "Kwepo")
+        self.assertEqual(self.new_user.user_password, "7710")
+    def test_log_in(self):
         """
-        test to see whether user is saved to user list
+        test to establish whether user can log into their credentials
         """
-        self.new_credentials.save_credentials()
-        self.assertEqual(len(Credentials.credentials_list), 1)
-    def test_save_multiple_credentials(self):
+        # start by saving user
+        self.new_user.save_user()
+        test_user = User("Hughes", "Mugera")
+        test_user.save_user()
+        found_credentials = User.log_in("Hughes", "Mugera")
+        self.assertEqual(found_credentials, Credentials.credentials_list)
+    def test_user_exists(self):
         """
-        test case: checking to see if multiple credentials can be saved to credentials list
+        test to check if we can return return boolean if user does not exist
         """
-        generated_password = self.new_credentials.generated_password()
-        self.assertEqual(len(generated_password), 10)
-    def test_display_credentials(self):
-        """
-        test to see if user can list all saved credentials
-        """
-        # saving the new credentials
-        self.new_credentials.save_credentials()
-        test_credentials = Credentials("joseph", "smith", "doe12")
-        test_credentials.save_credentials()
-        test_credentials = Credentials("joseph", "jane", "joy05")
-        test_credentials.save_credentials()
-        self.assertEqual(len(Credentials.display_credentials("joseph")), 2)
-        
-        def test_credentials_exist(self):
-        """
-        Test to check if we can return boolean for credentials not found
-        """
-        
-        self.new_credentials.save_credentials()
-        test_credentials = Credentials(
-            "joseph", "smith", "doe12")  # new credentials
-        test_credentials.save_credentials()
-        # with use of contact exist method
-        credentials_exists = Credentials.credentials_exists("smith")
-        self.assertTrue(credentials_exists)
-    def test_find_credentials(self):
-        """
-        test to check if we can find credentials by name and display information
-        """
-        self.new_credentials.save_credentials()
-        test_credentials = Credentials(
-            "emily", "gmail", "linkedin")  # new credentials
-        test_credentials.save_credentials()
-        found_credentials = Credentials.find_credentials("gmail", "linkedin")
-        self.assertEqual(found_credentials.credentials_name,
-                         test_credentials.credentials_name)
+        # first we save a user
+        self.new_user.save_user()
+        test_user = User("kwepo", "7710")  # new user
+        test_user.save_user()
+        # then with the existing contact
+        user_exists = User.user_exists("kwepo")
+        self.assertTrue(user_exists)
 if __name__ == '__main__':
-    unittest.main()
-
-        
-        
+    unittest.main(verbosity=2)
