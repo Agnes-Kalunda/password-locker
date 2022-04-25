@@ -26,6 +26,10 @@ As a user I would like:
 
 ## Technologies Used
 * Python3.9
+
+## Clone Link
+https://github.com/Agnes-Kalunda/password-locker.git
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 Copyright (c) 2022 **Agnes-Kalunda**
