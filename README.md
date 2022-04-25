@@ -11,10 +11,10 @@ These are the behaviours/features that the application implements for use by a u
 As a user I would like:
 	@@ -21,9 +21,10 @@ As a user I would like:
 | Display codes for navigation | **In terminal: $./run.py** | Use short code To add a new user,kindlyselect'cr' :To login into your account,kindly select 'lg'.And to leave your account,kindly select 'Ex' to exit.Thankyou |
-| Display prompt for creating an account | **Enter: newuser** | Create username. Create password  Confirm Password|
-| Display prompt for login in | **Enter: login** | Enter username and password|
+| Display prompt for creating an account | **Enter: cr** | Create username. Create password  Confirm Password|
+| Display prompt for login in | **Enter: lg** | Enter username and password|
 | 
-| Exit application | **Enter: x** | Exit |
+| Exit application | **Enter: Ex** | Exit |
 
 
 ### Prerequisites
