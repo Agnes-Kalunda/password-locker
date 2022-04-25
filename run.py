@@ -27,13 +27,39 @@ def main():
              print("confirm password")
              confirm_password= input()
              
-             else:
+            else:
                  print(f"congratulations {created_user_name},account successfully created!")
                  print('\n')
                  print("login")
                  print("Username")
                  entered_username = input()
-                 
+                 print("your password")
+                 entered_password=input()
+
+
+            while entered_password!= created_user_name or entered_password!=created_user_password:
+                     print("invalid username or password!Try again!")
+                     print("Username")
+                     entered_username = input()
+                     print("your password")
+                     entered_password=input()
+
+                else:
+                    print("welcome{created_username}to your account")
+                    print('\n')
+
+                    elif short_code == 'login':
+                        print("Enter username")
+                        default_user_name= input()
+
+                        print("Enter password")
+                        default_user_password= input()
+                        print('\n')
+
+                        while default_user_name!= 'testuser'or default_user_password!= 09876
+                        print
+
+
 
 
 
