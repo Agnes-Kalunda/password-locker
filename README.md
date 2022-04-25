@@ -13,11 +13,8 @@ As a user I would like:
 | Display codes for navigation | **In terminal: $./run.py** | Use short code To add a new user,kindlyselect'newuser' :To login into your account,kindly select 'login'.And to leave your account,kindly select 'x' to exit.Thankyou |
 | Display prompt for creating an account | **Enter: newuser** | Create username. Create password  Confirm Password|
 | Display prompt for login in | **Enter: login** | Enter username and password|
-| Display codes for navigation | **Successful login** | Choose an option: cc - Create Credential,dc - Display Credentials,fc- Find credentials ,ex - exit |
-| Display prompt for creating a credential | **Enter: cc** | Enter the account name,email, your username and password |
-| Display a list of credentials | **Enter: dc** | Prints a list of saved credentials |
-| Find  credentials | **Enter: fc** | Prints a particular account credentials |
-| Exit application | **Enter: ex** | Exit the current navigation stage |
+| 
+| Exit application | **Enter: x** | Exit |
 
 
 ### Prerequisites
