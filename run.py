@@ -1,6 +1,3 @@
-from user import User
-import random
-
 def main():
      while true:
          print("Welcome!")
@@ -37,14 +34,14 @@ def main():
                  entered_password=input()
 
 
-            while entered_password!= created_user_name or entered_password!=created_user_password:
+     while entered_password!= created_user_name or entered_password!=created_user_password:
                      print("invalid username or password!Try again!")
                      print("Username")
                      entered_username = input()
                      print("your password")
                      entered_password=input()
 
-                else:
+     else:
                     print("welcome{created_username}to your account")
                     print('\n')
 
@@ -56,7 +53,7 @@ def main():
                         default_user_password= input()
                         print('\n')
 
-                        while default_user_name!= 'testuser'or default_user_password!= 09876
+                        while default_user_name!= 'testuser'or default_user_password!= 09876:
                         print ("Your password/username did not match. username= 'testuser' and password= '09876'")
                         print ("please enter your username")
                         default_user_name = input()
@@ -65,19 +62,13 @@ def main():
                         default_user_password = input()
                         print("\n")
 
-                        else:
+else:
+                                
                             print("login successful!!")
                             print('\n')
                             print('\n')
 
-                            elif short_code == 'x':
-                                break
-                            else:
-                                print("please enter valid code")
-
-                                if __name__ == '_main_':
-                                    main()
-
+              
 
 
 
