@@ -2,7 +2,7 @@ import unittest
 from httplib2 import Credentials
 from user import User
 class TestUser(unittest.TestCase):
-     """
+    """
     test class that tests cases for the User class
     Args:
         unittest.Testcase: class that helps create test cases
@@ -11,7 +11,6 @@ class TestUser(unittest.TestCase):
         """
         set up method to run before each test case
         """
-        
 # create a user object
         self.new_user = User("Agnes", "0000")
     def tearDown(self):
@@ -41,7 +40,7 @@ class TestUser(unittest.TestCase):
         """
         # first we save a user
         self.new_user.save_user()
-        test_user = User("Agnes", "0000")  # new user
+        test_user = User("Agnes", "7710")  # new user
         test_user.save_user()
         # then with the existing contact
         user_exists = User.user_exists("Agnes")
