@@ -27,8 +27,12 @@ As a user I would like:
 ## Technologies Used
 * Python3.9
 
-## Clone Link
-https://github.com/Agnes-Kalunda/password-locker.git
+## Installation
+* Open terminal (ctr+alt+t)
+* git clone https://github.com/Agnes-Kalunda/password-locker.git
+* cd passwordLocker
+* code .
+* (view on github)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
