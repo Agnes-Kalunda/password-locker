@@ -57,7 +57,26 @@ def main():
                         print('\n')
 
                         while default_user_name!= 'testuser'or default_user_password!= 09876
-                        print
+                        print ("Your password/username did not match. username= 'testuser' and password= '09876'")
+                        print ("please enter your username")
+                        default_user_name = input()
+
+                        print("please enter your password")
+                        default_user_password = input()
+                        print("\n")
+
+                        else:
+                            print("login successful!!")
+                            print('\n')
+                            print('\n')
+
+                            elif short_code == 'x':
+                                break
+                            else:
+                                print("please enter valid code")
+
+                                if __name__ == '_main_':
+                                    main()
 
 
 
